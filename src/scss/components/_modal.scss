@@ -1,0 +1,33 @@
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1010;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: all 0.4s;
+
+  &_opened {
+    opacity: 1;
+  }
+
+  &__window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    max-width: 576px;
+    padding: 32px;
+    background: #fff;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 0.4s;
+  }
+
+  &_opened &__window {
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
