@@ -1,0 +1,21 @@
+.button {
+  display: inline-block;
+  padding: 10px 32px;
+  border: 0;
+  border-top: 0 solid #fff;
+  border-bottom: 10px solid darken($primary-color, 8%);
+  outline: 0 !important;
+  background: $primary-color;
+  cursor: pointer;
+  text-align: center;
+  font: 300 16px $primary-font;
+  color: #fff !important;
+  text-decoration: none !important;
+  transition: all 0.1s;
+
+  &:active {
+    border-top-width: 10px;
+    border-bottom-width: 0;
+    background: darken($primary-color, 8%);
+  }
+}
