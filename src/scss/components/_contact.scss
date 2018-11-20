@@ -1,0 +1,52 @@
+.contact {
+  position: relative;
+  padding: 16px;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.4s;
+  animation: scaleUp 0.4s;
+
+  &:hover {
+    box-shadow: 0 4px 22px rgba(0, 0, 0, 0.3);
+  }
+
+  &__remove {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    width: 24px;
+    height: 24px;
+    background: #f10000;
+    opacity: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+    transition: all 0.2s;
+
+    &:hover {
+      background: darken(#f10000, 8%);
+    }
+  }
+
+  &:hover &__remove {
+    opacity: 1;
+  }
+
+  &__name {
+    margin: 0 0 8px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  &__info {
+    font-size: 14px;
+    font-weight: 300;
+  }
+}
