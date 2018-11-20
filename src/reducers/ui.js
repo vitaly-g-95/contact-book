@@ -5,7 +5,7 @@ const initialState = {
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case 'MODAL_OPEN':
+    case 'OPEN_MODAL':
       const { top, left, height, width } = action.target.getBoundingClientRect();
 
       return Object.assign({}, state, {
@@ -15,14 +15,12 @@ export default (state = initialState, action) => {
           left: left + width / 2
         }
       });
-    case 'MODAL_CLOSE':
-      if (action.target !== action.currentTarget) {
-        break;
-      }
-
+    
+    case 'CLOSE_MODAL':
       return Object.assign({}, state, {
         modalContent: null
       });
+    
     default:
   }
 
