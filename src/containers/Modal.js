@@ -8,7 +8,9 @@ const mapStateToProps = store => ({
 
 const mapDispatchToProps = dispatch => ({
   onClick: ({ target, currentTarget }) => {
-    dispatch({ type: 'MODAL_CLOSE', target, currentTarget });
+    if (target === currentTarget) {
+      dispatch({ type: 'CLOSE_MODAL' });
+    }
   }
 });
 
